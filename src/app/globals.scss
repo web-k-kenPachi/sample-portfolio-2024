@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --liner-gradient-white-yellow: linear-gradient(
+    120.83deg,
+    #ffffff 0%,
+    #fff1d6 78.36%
+  );
+
+  --liner-gradient-white-red: linear-gradient(
+    -40deg,
+    #990a2c 11.97%,
+    #ffa4a4 84.89%
+  );
+
+  --liner-gradient-green: linear-gradient(
+    112.53deg,
+    #005651 2.91%,
+    #128989 100.54%
+  );
+
+  // --liner-gradient-cover-main: linear-gradient(
+  //   -35deg,
+  //   #e621ff 20.97%,
+  //   #a500ed 35.87%,
+  //   #450bff 64.23%,
+  //   #00075d 84.89%
+  // );
+
+  --liner-gradient-cover-main: linear-gradient(
+    -35deg,
+    #e621ff 20.97%,
+    #aa3bfe 43.87%,
+    #450bff 67.23%,
+    #00075d 84.89%
+  );
+
+  // --liner-gradient-cover-main: linear-gradient(
+  //   -35deg,
+  //   #e621ff 20.97%,
+  //   #8400bd 40.87%,
+  //   #450bff 64.23%,
+  //   #00075d 84.89%
+  // );
+}
+
+/* html {
+  font-size: calc(100vw / 375);
+}
+
+@media (min-width: 560px) {
+  html {
+    font-size: calc(100vw / 600);
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: calc(100vw / 1440);
+  }
+} */
+
+body {
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient-yellow {
+  background: linear-gradient(120.83deg, #ffffff 0%, #fff1d6 78.36%);
+}
+
+.overlay {
+  grid-area: 1 / 1 / -1 / -1;
+  display: grid;
+  position: relative;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 1;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.overlay div {
+  background: #000e14;
+}
+
+.transition__brightness {
+  grid-area: 1 / 1 / -1 / -1;
+  display: grid;
+  position: relative;
+  z-index: 900;
+  pointer-events: none;
+  opacity: 1;
+  grid-template-columns: repeat(4, 1fr);
+  backdrop-filter: brightness(150%) saturate(200%);
+}

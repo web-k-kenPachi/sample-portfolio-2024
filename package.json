@@ -1,0 +1,53 @@
+{
+  "name": "kk-portfolio-2024",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next-image-export-optimizer",
+    "start": "serve out",
+    "lint": "next lint",
+    "optimize": "next-image-export-optimizer",
+    "icon:generate": "npx @svgr/cli scripts/svg-generate/svgs -d src/components/Icon --config-file scripts/svg-generate/svgr.config.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.565.0",
+    "@gsap/react": "^2.1.0",
+    "@next/third-parties": "^14.2.3",
+    "@react-three/drei": "^9.105.2",
+    "@react-three/fiber": "^8.16.1",
+    "@studio-freight/lenis": "^1.0.42",
+    "@studio-freight/tempus": "^0.0.44",
+    "framer-motion": "^11.0.28",
+    "gsap": "^3.12.5",
+    "lamina": "^1.1.23",
+    "lucide-react": "^0.365.0",
+    "next": "^14.2.3",
+    "next-image-export-optimizer": "^1.12.3",
+    "prettier": "^3.2.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-tailwindcss": "^3.15.1",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "next-sitemap": "^4.2.3",
+    "postcss": "^8",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "sass": "^1.74.1",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

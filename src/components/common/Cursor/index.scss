@@ -1,0 +1,61 @@
+@media screen and (max-width: 768px) {
+  .cursor,
+  .cursor__pointer {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .cursor,
+  .cursor__pointer {
+    display: none;
+  }
+}
+
+.cursor {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  pointer-events: none;
+  display: flex;
+  mix-blend-mode: exclusion;
+  border-radius: 100%;
+  z-index: 1001;
+  .cursor__pointer {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: transform 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+  }
+
+  &.active--link-cursor {
+    .cursor__pointer {
+      transform: scale(2);
+    }
+  }
+
+  &.active--view-link-cursor {
+    .cursor__pointer {
+      transform: scale(8);
+
+      &::after {
+        content: 'View Project';
+        font-size: 4px;
+        font-family: var(--font-TanEnigma);
+        white-space: pre-line;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #000;
+      }
+    }
+  }
+}
